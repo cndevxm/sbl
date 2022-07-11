@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>[%d{HH:mm:ss}] %-4relative [%thread] %-5level %logger{50} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="druid.sql.Statement" level="debug"/>
+<!--    <logger name="druid.sql.DataSource" level="debug"/>-->
+<!--    <logger name="druid.sql.Connection" level="debug"/>-->
+<!--    <logger name="druid.sql.ResultSet" level="debug"/>-->
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
